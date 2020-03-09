@@ -1,4 +1,6 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import {ChildComponent} from './child/child.component';
+
 @Component({
   selector: 'app-parent',
   templateUrl: './parent.component.html',
@@ -6,7 +8,7 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 })
 export class ParentComponent implements OnInit {
   
-  @ViewChild('child') childComponent : ElementRef;
+  @ViewChild(ChildComponent) child : ChildComponent;
 
   constructor() { }
 
